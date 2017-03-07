@@ -1,8 +1,6 @@
 #!/bin/bash
-docker build -t kostyaurysov/sample-node .
-docker push kostyaurysov/sample-node
 
-ssh deploy@35.187.30.81 << EOF
+ssh a@130.211.74.89 << EOF
 docker pull kostyaurysov/sample-node:latest
 docker stop web || true
 docker rm web || true
